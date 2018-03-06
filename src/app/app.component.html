@@ -1,0 +1,22 @@
+<div class="page-header">
+  <div class="container">
+    <h1>Sportify <small>music for active people</small></h1>
+    <div class="navLinks">
+      <a [routerLink]="['/home']">Home</a>
+      <a [routerLink]="['/about']">About</a>
+      <a [routerLink]="['/contact']">Contact us</a>
+      <div class="well" *ngIf="authService.getUser()">
+        Logged in as <b>{{authService.getUser()}}</b>
+        <a href (click)="logout()">Log out</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="content">
+  <div class="container">
+    <app-login></app-login>
+    <hr>
+    <router-outlet></router-outlet>
+  </div>
+</div>

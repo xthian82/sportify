@@ -1,7 +1,7 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
 import {ActivatedRoute, Router} from '@angular/router';
 import {SpotifyService} from '../service/spotify';
-import {LocationStrategy} from "@angular/common";
+import {LocationStrategy} from '@angular/common';
 
 @Component({
   selector: 'app-track',
@@ -17,7 +17,7 @@ export class TrackComponent implements OnInit, OnDestroy {
               public locationStrategy: LocationStrategy) {
 
     this.sub = this.route.params.subscribe(params => {
-      this.id = params['id'];
+      this.id = params["id"];
     });
   }
 
